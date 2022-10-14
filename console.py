@@ -28,10 +28,11 @@ class HBNBCommand(cmd.Cmd):
 
     def precmd(self, ARG):
         """
-        Parses command imputs.
+        Parses command imputs
+        for the console.
         """
-         if '.' in ARG and '(' in ARG and ')' in ARG:
-             CLS = ARG.split('.')
+        if '.' in ARG and '(' in ARG and ')' in ARG:
+            CLS = ARG.split('.')
             CMD = CLS[1].split('(')
             ARGS = CMD[1].split(')')
             if CLS[0] in HBNBCommand.LClass and CMD[0] in HBNBCommand.LCmd:
