@@ -44,11 +44,11 @@ class BaseModel:
             storage.new(self)
         else:
             ISOform = "%Y-%m-%dT%H:%M:%S.%f"
-            for KEY, VALUE in kwargs.items():
-                if KEY == 'created_at' or KEY == 'updated_at':
-                    VALUE = datetime.strptime(kwargs[KEY], ISOform)
-                if KEY != '__class__':
-                    setattr(self, KEY, VALUE)
+            for key, value in kwargs.items():
+                if key == 'created_at' or key == 'updated_at':
+                    value = datetime.strftime(kwargs[key], ISOform)
+                if key != '__class__':
+                    setattr(self, key, value)
 
     def __str__(self):
         """
