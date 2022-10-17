@@ -22,7 +22,6 @@ class HBNBCommand(cmd.Cmd):
     Processor for the Commands.
     """
 
-    intro = 'Welcome to Holberton BnB Command.'
     prompt = '(hbnb)'
     LClass = [
             'BaseModel',
