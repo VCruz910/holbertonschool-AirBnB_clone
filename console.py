@@ -24,9 +24,23 @@ class HBNBCommand(cmd.Cmd):
 
     intro = 'Welcome to Holberton BnB Command.'
     prompt = '(hbnb)'
-    LClass = ['BaseModel', 'User', 'Amenity',
-            'Place', 'City', 'State', 'Review']
-    LCmd = ['create', 'show', 'update', 'all', 'destroy', 'count']
+    LClass = [
+            'BaseModel',
+            'User',
+            'Amenity',
+            'Place',
+            'City',
+            'State',
+            'Review'
+            ]
+    LCmd = [
+            'create',
+            'show',
+            'update',
+            'all',
+            'destroy',
+            'count'
+            ]
 
     def precmd(self, ARG):
         """
