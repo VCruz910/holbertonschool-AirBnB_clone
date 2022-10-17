@@ -22,7 +22,8 @@ class HBNBCommand(cmd.Cmd):
     Processor for the Commands.
     """
 
-    prompt = '(hbnb)'
+    prompt = '(hbnb) '
+
     LClass = [
             'BaseModel',
             'User',
@@ -32,6 +33,7 @@ class HBNBCommand(cmd.Cmd):
             'State',
             'Review'
             ]
+
     LCmd = [
             'create',
             'show',
@@ -92,9 +94,15 @@ class HBNBCommand(cmd.Cmd):
         elif TPModel not in HBNBCommand.LClass:
             print("** class doesn't exist **")
         else:
-            DICT = {'BaseModel': BaseModel, 'User': User, 'Place': Place,
-                    'City': City, 'Amenity': Amenity, 'State': State,
-                    'Review': Review}
+            DICT = {
+                    'BaseModel': BaseModel,
+                    'User': User,
+                    'Place': Place,
+                    'City': City,
+                    'Amenity': Amenity,
+                    'State': State,
+                    'Review': Review
+                    }
             MyModel = DICT[TPModel]()
             print(MyModel.id)
             MyModel.save()
